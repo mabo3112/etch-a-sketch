@@ -21,6 +21,15 @@ for(let i = 0; i < gridsize; i++){
 
 
 
+document.addEventListener("mousedown",function(e) {
+    mouseDown = true;
+})
+
+document.addEventListener("mouseup",function(e) {
+    mouseDown = false;
+})
+
+
 btn.addEventListener("click", function(e) {
     gridsize = input.value;
     grid.replaceChildren();
@@ -38,6 +47,22 @@ btn.addEventListener("click", function(e) {
 })
 
 grid.addEventListener("mouseover", function(e){
+    if(mouseDown) {
+        if(selection.value === "random") {
+            e.target.style.backgroundColor = randomColor();
+        } else if(selection.value === "black")
+            {
+            e.target.style.backgroundColor = "#000000"; 
+        } else if (selection.value === "red") {
+            e.target.style.backgroundColor = "#460909"; 
+        } else { //green
+            e.target.style.backgroundColor = "#00ff00";
+        }
+    }
+})
+
+grid.addEventListener("mousedown", function(e) {
+    e.preventDefault();
     if(selection.value === "random") {
         e.target.style.backgroundColor = randomColor();
     } else if(selection.value === "black")
@@ -48,7 +73,6 @@ grid.addEventListener("mouseover", function(e){
     } else { //green
         e.target.style.backgroundColor = "#00ff00";
     }
-    
 })
 
 function randomColor() {
