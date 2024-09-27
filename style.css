@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background-color: rgb(59, 57, 57);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#header{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    display: flex;
+    background-color: rgb(44, 52, 59);
+    justify-content: center;
+    padding: 0.5%;
+    color: gainsboro;
+    margin-bottom: 1%;
+}
+
+#title{
+    font-size: 50px;
+    
+
+}
+
+
+#grid {
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ align-self: center;
+ justify-content: space-around;
+ height: 80vh;
+ width:  80vh;
+ background-color: rgb(27, 28, 39);
+ margin-bottom: 2%;
+
+}
+
+.grid-squares  {
+    background-color: rgb(122, 117, 122);
+    /*border: 2px solid rgb(82, 6, 6); */
+    
+}
+
+#input{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#inputField {
+    margin: 0px 5px 0px 5px;
+}
+
+
+/*
+.grid-squares:hover {
+    background-color: #1d1b1b;
+}*/
